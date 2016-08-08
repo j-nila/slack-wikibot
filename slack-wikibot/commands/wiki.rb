@@ -1,3 +1,4 @@
+require 'mediawiki_api'
 module SlackWikibot
   module Commands
     class Wiki < SlackRubyBot::Commands::Base
