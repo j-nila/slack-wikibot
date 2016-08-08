@@ -1,7 +1,8 @@
 module SlackWikibot
   module Commands
     class Wiki < SlackRubyBot::Commands::Base
-      extend MediaWiki::Util::Config
+      client2 = MediawikiApi::Client.new "http://139.59.209.199/api.php"
+      client2.log_in "ardian", "ardianardian"
       match(/^!wiki create (?<titlewiki>\w*)\s(?<contentwiki>.*)$/) do |client, data, match|
         # match /^wiki create (?<location>\w*)\?$/ do |client, data, match|
         response = client2.create_page match[:titlewiki], match[:contentwiki]
