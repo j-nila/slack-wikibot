@@ -12,7 +12,7 @@ module SlackWikibot
         end
       match(/^!wiki delete (?<titlewiki>\w*)\s(?<reason>.*)$/) do |client, data, match|
         client2.delete_page match[:titlewiki], match[:reason]
-        client.say(channel: data.channel, text: "Article #{match[:titlewiki]} page is deleted")
+        client.say(channel: data.channel, text: "Article #{match[:titlewiki]} page is deleted. Reason: #{match[:reason]}")
       end
     end
   end
