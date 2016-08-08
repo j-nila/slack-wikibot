@@ -1,4 +1,4 @@
-require 'mediawiki_api'
+extend 'mediawiki'
 module SlackWikibot
   module Commands
     class Wiki < SlackRubyBot::Commands::Base
